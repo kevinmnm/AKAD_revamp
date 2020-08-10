@@ -10,7 +10,9 @@ const template = `
             <div v-else>{{ month[index].integer }}</div>
             <div class='fa fa-arrow-right nextM'></div>
         </div>
-        <div id='date_wrapper'></div>
+        <div id='date_wrapper'>
+        
+        </div>
     </div>
 `;
 
