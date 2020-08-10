@@ -15,6 +15,9 @@
     box-sizing: border-box;
     width: 90%;
     border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .learned_previous,
@@ -23,25 +26,63 @@
     width: 10%;
     box-sizing: border-box;
     border: 1px solid white;
+    background-color: rgb(51, 43, 102);
+    opacity: 0.1;
 }
+.learned_previous:hover,.learned_next:hover{opacity:1;}
+.learned_previous:active,.learned_next:active{box-shadow: 0 0 15px black inset;}
 
-/* .learned_previous,
-.learned_next{
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    width: 20%;
-    border: 1px solid white;
-    box-sizing: border-box;
-}
-.learned_previous{left:0;}
-.learned_next{right:0;}
 
-.learned_content{
+.fa-chevron-circle-right,
+.fa-chevron-circle-left{
     position: relative;
+    width: 100%;
+    border: 1px solid red;
     margin: auto;
-    box-sizing: border-box;
-    width: 80%;
-    border: 1px solid pink;
+    font-size: 60px;
+    text-align: center;
+    top: calc(50% - 30px);
+}
+
+@media only screen and (max-width: 600px) {
+    .fa-chevron-circle-right,
+    .fa-chevron-circle-left{
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .fa-chevron-circle-right,
+    .fa-chevron-circle-left{
+        display: none;
+    }
+}
+.date{
+    border: 1px solid red;
+    font-size: 16px;
+}
+
+.title{
+    border: 1px solid green;
+    font-size: calc(2vw + 2vh);
+    font-weight: bold;
+}
+
+.description{
+    border: 1px solid skyBlue;
+    text-align: left;
+    text-indent: 50px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .description{
+        text-indent: 0;
+        text-align: center;
+    }
+}
+
+.example{
+    border: 1px solid violet;
     height: 100%;
-} */
+    width: 100%;
+}
