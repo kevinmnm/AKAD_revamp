@@ -3,7 +3,7 @@ import AKAD from "../ADAKNotes_revamp.js";
 
 
 const templater = `
-    <div class='learned_section' v-show='showProp'>
+    <div class='learned_section'>
         <div class='learned_previous'>
             <div class='fa fa-chevron-circle-left'></div>
         </div>

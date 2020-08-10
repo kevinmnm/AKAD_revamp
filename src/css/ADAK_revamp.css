@@ -1,6 +1,7 @@
 @import "calendar.css";
 @import "list.css";
 @import "learned.css";
+@import "custom_scroll_bar.css";
 
 body{
     position: absolute;
