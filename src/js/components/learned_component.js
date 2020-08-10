@@ -9,9 +9,13 @@ const templater = `
         </div>
         <div class='learned_content'>
             <code class='date'>{{ akad[parentValue].date }}</code>
-            <div class='title'><u>{{  }}</u></div>
-            <div class='description'>{{  }}</div>
-            <div class='example'>{{  }}</div>
+            <div class='title'><u>{{ akad[parentValue].topic }}</u></div>
+            <div class='description'>{{ akad[parentValue].description }}</div>
+            <div class='example'>
+                <div class='embed' 
+                v-html='akad[parentValue].codepenEmbed'>
+                </div>
+            </div>
         </div>
         <div class='learned_next'>
             <div class='fa fa-chevron-circle-right'></div>

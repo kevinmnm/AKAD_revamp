@@ -17,7 +17,8 @@ const AKAD_app = new Vue({
     methods: {
         learned_data($dat){ //Catch emitted data
             this.show_learned_comp = true;
-            this.value_passer = $dat;
+            this.value_passer = $dat - 1;
+            alert(this.value_passer);
         }
     },
     components: {

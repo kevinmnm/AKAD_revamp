@@ -384,7 +384,7 @@ let AKAD = [
         uniqueIdMatch: 'z731',
         date: '07/31/2020',
         content: 'Vue',
-        topic: '<transition-group>!',
+        topic: '[transition-group]!',
         description: 'This is a very important topic!',
         referenceLink1: 'https://vuejs.org/v2/guide/transitions.html#List-Entering-Leaving-Transitions',
         referenceLink2: 'https://www.w3resource.com/javascript-exercises/javascript-array-exercise-17.php',
