@@ -26,7 +26,7 @@ const months_2020 = [
     },
     {
         string: 'June',
-        interger: 6,
+        integer: 6,
         days: 30
 
     },
