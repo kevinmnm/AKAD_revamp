@@ -1,5 +1,5 @@
-import AKAD from "./ADAKNotes_revamp.js"
-import calendar from "./components/calendar_component.js "
+
+import calendar from "./components/calendar_component.js"
 
 
 

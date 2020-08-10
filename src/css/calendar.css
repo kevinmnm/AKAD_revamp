@@ -4,4 +4,14 @@
     border: 1px solid #909090;
     margin: 20px auto;
     width: 65%;
+    user-select: none;
+}
+
+.month{
+    position: relative;
+    color: white;
+    text-align: center;
+    border: 1px solid red;
+    font-size: 30px;
+    font-weight: bold;
 }
