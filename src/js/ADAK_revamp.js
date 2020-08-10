@@ -1,10 +1,12 @@
 
-import calendar from "./components/calendar_component.js"
+import calendar_component from "./components/calendar_component.js";
+import AKAD from "./ADAKNotes_revamp.js";
 
 
 
 
 const AKAD_app  = new Vue({
-    el: "#AKAD",
-    components: calendar
+    el: "#app",
+    components: calendar_component
 });
+

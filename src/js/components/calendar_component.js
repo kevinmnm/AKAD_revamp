@@ -1,4 +1,6 @@
 import months_2020 from "./months_2020.js"
+import AKAD from "../ADAKNotes_revamp.js";
+
 
 
 
@@ -40,16 +42,29 @@ const calendar_component = {
                 } else {
                     this.index !== 11 ? this.index++ : this.index = 0;
                 }
-            }
-        },
-        watch: {
-            index(){ //Renders days (pushes to array) divs on month change.
+            },
+            generateDays(){ //Declared here for calling purpose only.
                 this.daysDiv = [];
                 for (let i=0; i<this.month[this.index].days; i++) {
                     this.daysDiv.push(i+1);
                 }
-                console.log(this.daysDiv);
+                this.generateColor();
+            },
+            generateColor(){ //Decared to be called in generateDays().
+                for (let i=0; i<this.daysDiv.length; i++) {
+                    if (this.akad[i].uniqueIdMatch.substring(0, 2) === 'z'+this.index+1) {
+                        console.log(this.akad[i].uniqueIdMatch.substring(0, 2));
+                    }
+                }
             }
+        },
+        watch: {
+            index(){   
+                this.generateDays();
+            }
+        },
+        mounted(){
+            this.generateDays();
         }
     }
 }
@@ -57,4 +72,4 @@ const calendar_component = {
 
 
 
-export default calendar_component;;
+export default calendar_component

@@ -62,4 +62,4 @@ const months_2020 = [
     }
 ];
 
-export default months_2020;
+export default months_2020

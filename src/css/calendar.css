@@ -26,3 +26,25 @@
 }.prevM{left:0;}.nextM{right:0;}
 .prevM:hover,
 .nextM:hover{opacity:1;}
+
+#date_wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+    border: 1px solid green;
+}
+
+.days{
+    box-sizing: border-box;
+    border: 1px solid white;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+    flex-grow: 1;
+}
