@@ -11,11 +11,13 @@ const AKAD_app = new Vue({
     el: "#app",
     data: {
         show_list_comp: true,
-        show_learned_comp: false
+        show_learned_comp: false,
+        value_passer: null
     },
     methods: {
-        learned_data(){ //Catch emitted data
+        learned_data($dat){ //Catch emitted data
             this.show_learned_comp = true;
+            this.value_passer = $dat;
         }
     },
     components: {

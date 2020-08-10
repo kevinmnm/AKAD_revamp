@@ -10,7 +10,12 @@ const templater = `
             <div :class='{css_select: css_selected}'>CSS</div>
         </div>
         </div>
-        <div class='list_block' v-for='all in akad_length' @click="$emit('learn-emit')">{{ all }}</div>
+        <div 
+        class='list_block' 
+        v-for='all in akad_length' 
+        @click='emitter($event)'>
+            {{ all }}
+        </div>
     </div>
 `
 
@@ -31,6 +36,9 @@ export default {
         }
     },
     methods: {
+        emitter(e){ //Emits block's innerHTML number.
+            this.$emit('learn-emit', Number(e.target.innerHTML));
+        },
         sort(e){
             let x = e.target;
             let js_blocks = document.querySelectorAll('.js');
