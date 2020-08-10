@@ -1,0 +1,19 @@
+#list_wrapper{
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #909090;
+    margin: 20px auto;
+    width: 65%;
+    user-select: none;
+}
+
+.list_block{
+    box-sizing: border-box;
+    border: 1px solid white;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+    flex-grow: 1;
+}

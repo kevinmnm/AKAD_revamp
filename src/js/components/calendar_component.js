@@ -18,8 +18,7 @@ const template = `
     </div>
 `;
 
-const calendar_component = {
-    "calendar-comp": {
+export default {
         template: template,
         data(){
             return {
@@ -28,11 +27,6 @@ const calendar_component = {
                 index: 6,
                 show_str: true,
                 daysDiv: []
-            }
-        },
-        computed: {
-            total_days_month(){
-                return 
             }
         },
         methods: {
@@ -51,10 +45,14 @@ const calendar_component = {
                 this.generateColor();
             },
             generateColor(){ //Decared to be called in generateDays().
-                
-                for (let i=0; i<this.daysDiv.length; i++) {
-                    if (this.akad[i].uniqueIdMatch.substring(0, 2) === 'z'+(this.index+1)) {
-                        console.log(this.akad[i].uniqueIdMatch.substring(0, 2));
+                let a = this.daysDiv.length;
+                let b = this.akad;
+                let c = this.index;
+                for (let i=0; i<a; i++) {
+                    if (b[i].uniqueIdMatch.substring(0, 2) === 'z'+(c+1)) { 
+                        if (b[i].content === 'JS') {
+                            document.querySelectorAll('.days')[i].style.backgroundColor = 'yellow';
+                        }
                     }
                 }
             }
@@ -66,11 +64,24 @@ const calendar_component = {
         },
         mounted(){
             this.generateDays();
+            // let leng = this.daysDiv.length;
+            // let ak = this.akad;
+            // let indd = this.index
+            // setTimeout(()=>{
+            //     for (let i=0; i<leng; i++) {
+            //         if (ak[i].uniqueIdMatch.substring(0, 2) === 'z'+(indd+1)) { 
+            //             if (ak[i].content === 'JS') {
+            //                 document.querySelectorAll('.days')[i].style.backgroundColor = 'yellow';
+            //             }
+            //         }
+            //     }
+            // },1000);
         }
-    }
+    
 }
 
 
 
 
-export default calendar_component
+
+//export default calendar_component
