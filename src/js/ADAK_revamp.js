@@ -14,8 +14,5 @@ const AKAD_app  = new Vue({
     components: {
         'calendar-comp': calendar_component,
         'list-comp': list_component
-    },
-    methods: {
-        
     }
 });

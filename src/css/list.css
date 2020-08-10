@@ -48,7 +48,6 @@
     flex-direction: column;
     box-shadow: 0 0 5px white;
     z-index: 1;
-    padding: 5px;
     justify-content: space-between;
 }
 .sort_by div{
@@ -58,8 +57,11 @@
     height: 33%;
     line-height: 1.6;
     cursor: pointer;
+    box-sizing: border-box;
+    padding: 5px;
 }
+.sort_by div:hover{border: 1px solid grey;}
 
-.js_select{color:yellow;text-shadow:0 0 5px yellow;}
-.vue_select{color:lightGreen;text-shadow: 0 0 5px lightGreen;}
-.css_select{color:skyBlue;text-shadow: 0 0 5px skyBlue;}
+.js_select{color:yellow;text-shadow:0 0 7px yellow;}
+.vue_select{color:lightGreen;text-shadow: 0 0 7px lightGreen;}
+.css_select{color:skyBlue;text-shadow: 0 0 7px skyBlue;}
