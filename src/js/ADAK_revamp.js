@@ -8,8 +8,14 @@ import list_component from "./components/list_component.js";
 
 const AKAD_app  = new Vue({
     el: "#app",
+    data: {
+        show_list: true
+    },
     components: {
         'calendar-comp': calendar_component,
         'list-comp': list_component
+    },
+    methods: {
+        
     }
 });

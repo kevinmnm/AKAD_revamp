@@ -2,7 +2,14 @@ import AKAD from "../ADAKNotes_revamp.js";
 
 const templater = `
     <div id='list_wrapper'>
-        <div class='list_all'>All Contents </div>
+        <div class='list_all'>All Contents
+        <div class="fa fa-sort"></div>
+        <div class='sort_by'>
+            <div class='js_select'>JavaScript</div>
+            <div class='vue_select'>Vue</div>
+            <div class='css_select'>CSS</div>
+        </div>
+        </div>
         <div class='list_block' v-for='all in akad_length'>{{ all }}</div>
     </div>
 `
