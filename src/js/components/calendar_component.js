@@ -51,8 +51,9 @@ const calendar_component = {
                 this.generateColor();
             },
             generateColor(){ //Decared to be called in generateDays().
+                
                 for (let i=0; i<this.daysDiv.length; i++) {
-                    if (this.akad[i].uniqueIdMatch.substring(0, 2) === 'z'+this.index+1) {
+                    if (this.akad[i].uniqueIdMatch.substring(0, 2) === 'z'+(this.index+1)) {
                         console.log(this.akad[i].uniqueIdMatch.substring(0, 2));
                     }
                 }
