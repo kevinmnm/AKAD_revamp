@@ -11,7 +11,7 @@ const template = `
             <div class='fa fa-arrow-right nextM' @click.stop='changeM($event)'></div>
         </div>
         <div id='date_wrapper'>
-            <div class='days'>{{  }}</div>
+            <div class='days' v-for='all in daysDiv'>{{ all }}</div>
         </div>
     </div>
 `;
@@ -24,7 +24,8 @@ const calendar_component = {
                 akad: AKAD,
                 month: months_2020,
                 index: 6,
-                show_str: true
+                show_str: true,
+                daysDiv: []
             }
         },
         computed: {
@@ -33,12 +34,21 @@ const calendar_component = {
             }
         },
         methods: {
-            changeM(e){
+            changeM(e){ //Triggers watch index() function.
                 if (e.target.classList.contains('prevM')) {
                     this.index !== 0 ? this.index-- : this.index = 11;
                 } else {
                     this.index !== 11 ? this.index++ : this.index = 0;
                 }
+            }
+        },
+        watch: {
+            index(){ //Renders days (pushes to array) divs on month change.
+                this.daysDiv = [];
+                for (let i=0; i<this.month[this.index].days; i++) {
+                    this.daysDiv.push(i+1);
+                }
+                console.log(this.daysDiv);
             }
         }
     }
