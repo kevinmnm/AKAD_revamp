@@ -31,4 +31,7 @@ body{
     cursor: pointer;
 }
 
-.js{color:black;}
+.js{background-color:yellow;}
+.vue{background-color:lightGreen;}
+.css{background-color: skyBlue;}
+.js,.vue,.css{border:none;}

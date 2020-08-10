@@ -23,11 +23,12 @@ export default {
         let list_block = document.querySelectorAll('.list_block');
         for (let i=0; i<this.akad.length; i++) {
             if (this.akad[i].content === 'JS') {
-                //list_block[i].style.backgroundColor = 'yellow';
                 list_block[i].classList.add('js');
+            } else if (this.akad[i].content === 'Vue') {
+                list_block[i].classList.add('vue');
+            } else if (this.akad[i].content === 'CSS') {
+                list_block[i].classList.add('css');
             }
         }
     }
 }
-
-//export default list_component;
