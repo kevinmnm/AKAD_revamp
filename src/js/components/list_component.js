@@ -3,8 +3,8 @@ import AKAD from "../ADAKNotes_revamp.js";
 const templater = `
     <div id='list_wrapper'>
         <div class='list_all'>All Contents
-        <div class="fa fa-sort"></div>
-        <div class='sort_by' @click.capture='sort($event)'>
+        <div class="fa fa-sort" @click='sort_icon = !sort_icon'></div>
+        <div class='sort_by' @click.capture='sort($event)' v-show='sort_icon'>
             <div :class='{js_select: js_selected}'>JavaScript</div>
             <div :class='{vue_select: vue_selected}'>Vue</div>
             <div :class='{css_select: css_selected}'>CSS</div>
@@ -19,6 +19,7 @@ export default {
     data(){
         return {
             akad: AKAD,
+            sort_icon: false,
             js_selected: true,
             vue_selected: true,
             css_selected: true
