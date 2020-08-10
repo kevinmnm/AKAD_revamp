@@ -8,6 +8,7 @@
     margin-bottom: 30px; 
     display: flex;
     flex-direction: row;
+    background-color: #101010;
 }
 
 .learned_content{
@@ -37,7 +38,6 @@
 .fa-chevron-circle-left{
     position: relative;
     width: 100%;
-    border: 1px solid red;
     margin: auto;
     font-size: 60px;
     text-align: center;

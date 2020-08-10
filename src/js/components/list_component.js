@@ -10,7 +10,7 @@ const templater = `
             <div :class='{css_select: css_selected}'>CSS</div>
         </div>
         </div>
-        <div class='list_block' v-for='all in akad_length'>{{ all }}</div>
+        <div class='list_block' v-for='all in akad_length' @click="$emit('learn-emit')">{{ all }}</div>
     </div>
 `
 

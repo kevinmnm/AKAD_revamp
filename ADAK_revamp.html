@@ -17,10 +17,11 @@
     
 <div id="app">
     <h2 id='yr' onclick='location.reload()'>2020</h2>
-    <calendar-comp v-show='!show_list'></calendar-comp>
-    <list-comp v-show='show_list'></list-comp>
 
-    <learned-comp></learned-comp>
+    <calendar-comp v-show='!show_list_comp'></calendar-comp>
+    <list-comp v-show='show_list_comp' @learn-emit='learned_data()'></list-comp>
+
+    <learned-comp v-show='show_learned_comp'></learned-comp>
 </div>
 
 </body>

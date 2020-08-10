@@ -63,19 +63,7 @@ export default {
         }
     },
     mounted(){
-        this.generateDays();
-        // let leng = this.daysDiv.length;
-        // let ak = this.akad;
-        // let indd = this.index
-        // setTimeout(()=>{
-        //     for (let i=0; i<leng; i++) {
-        //         if (ak[i].uniqueIdMatch.substring(0, 2) === 'z'+(indd+1)) { 
-        //             if (ak[i].content === 'JS') {
-        //                 document.querySelectorAll('.days')[i].style.backgroundColor = 'yellow';
-        //             }
-        //         }
-        //     }
-        // },1000);
+        //this.generateDays();
     }
     
 }

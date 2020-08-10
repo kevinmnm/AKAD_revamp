@@ -1,16 +1,22 @@
 
 import calendar_component from "./components/calendar_component.js";
-import AKAD from "./ADAKNotes_revamp.js";
+//import AKAD from "./ADAKNotes_revamp.js";
 import list_component from "./components/list_component.js";
 import learned_component from "./components/learned_component.js";
 
 
 
 
-const AKAD_app  = new Vue({
+const AKAD_app = new Vue({
     el: "#app",
     data: {
-        show_list: true
+        show_list_comp: true,
+        show_learned_comp: false
+    },
+    methods: {
+        learned_data(){ //Catch emitted data
+            this.show_learned_comp = true;
+        }
     },
     components: {
         'calendar-comp': calendar_component,
