@@ -1,5 +1,7 @@
 #list_wrapper{
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     border: 1px solid #909090;
     margin: 20px auto;
@@ -16,4 +18,14 @@
     text-align: center;
     margin: 5px;
     flex-grow: 1;
+}
+
+.list_all{
+    position: relative;
+    color: white;
+    text-align: center;
+    border: 1px solid red;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
 }

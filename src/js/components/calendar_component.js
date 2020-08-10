@@ -19,64 +19,64 @@ const template = `
 `;
 
 export default {
-        template: template,
-        data(){
-            return {
-                akad: AKAD,
-                month: months_2020,
-                index: 6,
-                show_str: true,
-                daysDiv: []
+    template: template,
+    data(){
+        return {
+            akad: AKAD,
+            month: months_2020,
+            index: 6,
+            show_str: true,
+            daysDiv: []
+        }
+    },
+    methods: {
+        changeM(e){ //Triggers watch index() function.
+            if (e.target.classList.contains('prevM')) {
+                this.index !== 0 ? this.index-- : this.index = 11;
+            } else {
+                this.index !== 11 ? this.index++ : this.index = 0;
             }
         },
-        methods: {
-            changeM(e){ //Triggers watch index() function.
-                if (e.target.classList.contains('prevM')) {
-                    this.index !== 0 ? this.index-- : this.index = 11;
-                } else {
-                    this.index !== 11 ? this.index++ : this.index = 0;
-                }
-            },
-            generateDays(){ //Declared here for calling purpose only.
-                this.daysDiv = [];
-                for (let i=0; i<this.month[this.index].days; i++) {
-                    this.daysDiv.push(i+1);
-                }
-                this.generateColor();
-            },
-            generateColor(){ //Decared to be called in generateDays().
-                let a = this.daysDiv.length;
-                let b = this.akad;
-                let c = this.index;
-                for (let i=0; i<a; i++) {
-                    if (b[i].uniqueIdMatch.substring(0, 2) === 'z'+(c+1)) { 
-                        if (b[i].content === 'JS') {
-                            document.querySelectorAll('.days')[i].style.backgroundColor = 'yellow';
-                        }
+        generateDays(){ //Declared here for calling purpose only.
+            this.daysDiv = [];
+            for (let i=0; i<this.month[this.index].days; i++) {
+                this.daysDiv.push(i+1);
+            }
+            this.generateColor();
+        },
+        generateColor(){ //Decared to be called in generateDays().
+            let a = this.daysDiv.length;
+            let b = this.akad;
+            let c = this.index;
+            for (let i=0; i<a; i++) {
+                if (b[i].uniqueIdMatch.substring(0, 2) === 'z'+(c+1)) { 
+                    if (b[i].content === 'JS') {
+                        document.querySelectorAll('.days')[i].style.backgroundColor = 'yellow';
                     }
                 }
             }
-        },
-        watch: {
-            index(){   
-                this.generateDays();
-            }
-        },
-        mounted(){
-            this.generateDays();
-            // let leng = this.daysDiv.length;
-            // let ak = this.akad;
-            // let indd = this.index
-            // setTimeout(()=>{
-            //     for (let i=0; i<leng; i++) {
-            //         if (ak[i].uniqueIdMatch.substring(0, 2) === 'z'+(indd+1)) { 
-            //             if (ak[i].content === 'JS') {
-            //                 document.querySelectorAll('.days')[i].style.backgroundColor = 'yellow';
-            //             }
-            //         }
-            //     }
-            // },1000);
         }
+    },
+    watch: {
+        index(){   
+            this.generateDays();
+        }
+    },
+    mounted(){
+        this.generateDays();
+        // let leng = this.daysDiv.length;
+        // let ak = this.akad;
+        // let indd = this.index
+        // setTimeout(()=>{
+        //     for (let i=0; i<leng; i++) {
+        //         if (ak[i].uniqueIdMatch.substring(0, 2) === 'z'+(indd+1)) { 
+        //             if (ak[i].content === 'JS') {
+        //                 document.querySelectorAll('.days')[i].style.backgroundColor = 'yellow';
+        //             }
+        //         }
+        //     }
+        // },1000);
+    }
     
 }
 
