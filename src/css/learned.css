@@ -5,10 +5,10 @@
     box-shadow: 0 0 5px white;
     width: 100%;
     height: auto;
-    margin-bottom: 30px; 
     display: flex;
     flex-direction: row;
     background-color: #101010;
+    margin-bottom: 50px;
 }
 
 .learned_content{
@@ -38,10 +38,10 @@
     position: relative;
     width: 100%;
     margin: auto;
-    height: 100%;
     font-size: 60px;
     text-align: center;
     top: calc(50% - 30px);
+    display: block;
 }
 
 @media only screen and (max-width: 600px) {

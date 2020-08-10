@@ -23,13 +23,13 @@
 
 .list_all{
     position: relative;
-    color: white;
+    color: lightGrey;
     text-align: center;
     border: 1px solid red;
     font-size: 30px;
     font-weight: bold;
     width: 100%;
-}
+}.list_all:hover{color:white;}
 
 .fa-sort{
     position: absolute;
