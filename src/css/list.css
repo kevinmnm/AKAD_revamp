@@ -67,3 +67,12 @@
 .js_select{color:yellow;text-shadow:0 0 7px yellow;}
 .vue_select{color:lightGreen;text-shadow: 0 0 7px lightGreen;}
 .css_select{color:skyBlue;text-shadow: 0 0 7px skyBlue;}
+
+#hover_el{
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(53, 2, 53);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
