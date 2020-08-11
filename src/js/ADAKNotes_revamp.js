@@ -405,13 +405,13 @@ let AKAD = [
         See the Pen <a href='https://codepen.io/kevinmnm/pen/wvGaqYx'>Enumerables &amp; Iterables</a> by kevin
         (<a href='https://codepen.io/kevinmnm'>@kevinmnm</a>) on <a href='https://codepen.io'>CodePen</a>.
       </iframe>`
-    }
+    },
     {
         uniqueIdMatch: 'z82',
         date: '08/02/2020',
         content: 'Vue',
         topic: 'Saving Props Value to Data!',
-        description: 'There\'s an effective way to save props passed from parent to child\'s data!',
+        description: 'There\'s an effective way to save props passed from parent to child\'s data. However, this methods is NOT reactive!',
         referenceLink1: 'https://www.w3schools.com/code/tryit.asp?filename=GHNCA53X63A0',
         referenceLink2: 'https://vuejs.org/v2/api/#props',
         codepenEmbed: `<iframe height="600" style="width: 100%;" scrolling="no" title="Vue Passing Props Value to Child's Data!" src="https://codepen.io/kevinmnm/embed/ZEWbXqO?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">

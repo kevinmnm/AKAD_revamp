@@ -21,7 +21,7 @@ const templater = `
                 </div>
             </div>
         </div>
-        <div class='learned_next'>
+        <div class='learned_next' @click='func()'>
             <div class='fa fa-chevron-circle-right'></div>
         </div>
     </div>
@@ -32,7 +32,13 @@ export default {
     props: ['parent-value'],
     data(){
         return {
-            akad: AKAD
+            akad: AKAD,
+            pv: this.parentValue
+        }
+    },
+    methods:{
+        func(){
+            alert(this.pv);
         }
     }
 }
