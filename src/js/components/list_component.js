@@ -16,6 +16,7 @@ const templater = `
         @click='emitter($event)'>
             {{ all }}
         </div>
+
     </div>
 `
 

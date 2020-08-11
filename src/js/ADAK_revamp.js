@@ -7,6 +7,7 @@ import learned_component from "./components/learned_component.js";
 
 
 
+
 const AKAD_app = new Vue({
     el: "#app",
     data: {

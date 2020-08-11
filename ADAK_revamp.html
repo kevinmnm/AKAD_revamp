@@ -15,7 +15,7 @@
 </head>
 <body>
     
-<div id="app">
+<div id="app" @mousemove='hover_title($event)'>
     <h2 id='yr' onclick='location.reload()'>2020</h2>
 
     <calendar-comp v-show='!show_list_comp'></calendar-comp>
@@ -25,6 +25,7 @@
     v-show='show_learned_comp' 
     :parent-value='value_passer'>
     </learned-comp>
+
 </div>
 
 </body>
