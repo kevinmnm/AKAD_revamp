@@ -11,15 +11,18 @@ const templater = `
             <div :class='{css_select: css_selected}'>CSS</div>
         </div>
         </div>
-        <div 
-        class='list_block' 
-        v-for='all in akad_length' 
-        @click='emitter($event)' 
-        @mousemove='hover_func($event)'
-        @mouseleave='hover_func2($event)'>
-            {{ all }}
-        </div>
-    <div id='hover_el'>asdf</div>
+
+            <div 
+            :key='all' 
+            class='list_block' 
+            v-for='all in akad_length' 
+            @click='emitter($event)' 
+            @mousemove='hover_func($event)'
+            @mouseleave='hover_func2($event)'>
+                {{ all }}
+            </div>
+            
+    <div id='hover_el'></div>
     </div>
 `
 

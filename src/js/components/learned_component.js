@@ -4,9 +4,11 @@ import AKAD from "../ADAKNotes_revamp.js";
 
 const templater = `
     <div class='learned_section'>
+
         <div class='learned_previous' @click='prev_content()'>
             <div class='fa fa-chevron-circle-left'></div>
         </div>
+    
         <div class='learned_content'>
             <code class='date'>{{ akad[pv_new].date }}</code>
             <div class='title'><u>{{ akad[pv_new].topic }}</u></div>
@@ -21,9 +23,11 @@ const templater = `
                 </div>
             </div>
         </div>
+    
         <div class='learned_next' @click='next_content()'>
             <div class='fa fa-chevron-circle-right'></div>
         </div>
+
     </div>
 `
 
@@ -32,25 +36,21 @@ export default {
     props: ['parent-value'],
     data(){
         return {
-            akad: AKAD
+            akad: AKAD,
         }
     },
     computed: {
         pv_new(){
-            return this.parentValue;
+            return this.parentValue
         }
     },
     methods: {
         prev_content(){
-            if (this.parentValue === 0) {
-                return
-            }
+            if (this.parentValue === 0) {return}
             this.parentValue--;
         },
         next_content(){
-            if (this.parentValue === this.akad.length - 1) {
-                return
-            }
+            if (this.parentValue === this.akad.length - 1) {return}
             this.parentValue++;
         }
     }

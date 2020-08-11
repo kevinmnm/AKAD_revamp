@@ -50,7 +50,7 @@
         font-size: 40px;
     }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .fa-chevron-circle-right,
     .fa-chevron-circle-left{
         display: none;
@@ -99,3 +99,18 @@
 
 .reference a{color:darkGrey;}
 .reference a:hover{color:skyBlue;}
+
+.learned-enter{
+    opacity: 0;
+}
+.learned-enter-to{
+    opacity: 1;
+}
+.learned-leave-to{
+    opacity: 0;
+}
+
+.learned-enter-active,
+.learned-leave-active{
+    transition: all 1s ease;
+}
