@@ -1,11 +1,17 @@
 import AKAD from "./ADAKNotes_revamp.js";
 
 export default function custom_title(e){
-    const el = document.querySelector('#hover_el');
-    el.style.top = e.clientY - 50 + 'px';
-    el.style.left = e.clientX - 100 + 'px';
+    let el = document.querySelector('#hover_el');
+
+    el.style.display = 'block';
+    el.style.top = e.pageY - 50 + 'px';
+    el.style.left = e.pageX - 200 + 'px';
 
     el.innerHTML = AKAD[Number(e.target.innerHTML)-1].topic;
-    console.log(Number(e.target.innerHTML)-1);
+}
+
+export function custome_title_hide(e){
+    let el = document.querySelector('#hover_el');
+    el.style.display = 'none';
 }
 

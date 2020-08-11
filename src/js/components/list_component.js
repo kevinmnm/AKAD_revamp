@@ -1,5 +1,5 @@
 import AKAD from "../ADAKNotes_revamp.js";
-import custom_title from "../hover_function.js";
+import custom_title, { custome_title_hide } from "../hover_function.js";
 
 const templater = `
     <div id='list_wrapper'>
@@ -15,7 +15,8 @@ const templater = `
         class='list_block' 
         v-for='all in akad_length' 
         @click='emitter($event)' 
-        @mousemove='hover_func($event)'>
+        @mousemove='hover_func($event)'
+        @mouseleave='hover_func2($event)'>
             {{ all }}
         </div>
     <div id='hover_el'>asdf</div>
@@ -41,6 +42,9 @@ export default {
     methods: {
         hover_func(e){
             custom_title(e); //Imported from another file.
+        },
+        hover_func2(e){
+            custome_title_hide(e);
         },
         emitter(e){ //Emits block's innerHTML number.
             this.$emit('learn-emit', Number(e.target.innerHTML));
