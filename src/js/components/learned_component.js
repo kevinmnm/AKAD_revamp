@@ -4,24 +4,24 @@ import AKAD from "../ADAKNotes_revamp.js";
 
 const templater = `
     <div class='learned_section'>
-        <div class='learned_previous'>
+        <div class='learned_previous' @click='prev_content()'>
             <div class='fa fa-chevron-circle-left'></div>
         </div>
         <div class='learned_content'>
-            <code class='date'>{{ akad[parentValue].date }}</code>
-            <div class='title'><u>{{ akad[parentValue].topic }}</u></div>
-            <div class='description'>{{ akad[parentValue].description }}</div>
+            <code class='date'>{{ akad[pv_new].date }}</code>
+            <div class='title'><u>{{ akad[pv_new].topic }}</u></div>
+            <div class='description'>{{ akad[pv_new].description }}</div>
             <div class='reference'>
-                <a :href="akad[parentValue].referenceLink1" target='_blank'>Link1</a>
-                <a :href="akad[parentValue].referenceLink2" target='_blacnk'>Link2</a>
+                <a :href="akad[pv_new].referenceLink1" target='_blank'>Link1</a>
+                <a :href="akad[pv_new].referenceLink2" target='_blacnk'>Link2</a>
             </div>
             <div class='example'>
                 <div class='embed' 
-                v-html='akad[parentValue].codepenEmbed'>
+                v-html='akad[pv_new].codepenEmbed'>
                 </div>
             </div>
         </div>
-        <div class='learned_next' @click='func()'>
+        <div class='learned_next' @click='next_content()'>
             <div class='fa fa-chevron-circle-right'></div>
         </div>
     </div>
@@ -32,13 +32,26 @@ export default {
     props: ['parent-value'],
     data(){
         return {
-            akad: AKAD,
-            pv: this.parentValue
+            akad: AKAD
         }
     },
-    methods:{
-        func(){
-            alert(this.pv);
+    computed: {
+        pv_new(){
+            return this.parentValue;
+        }
+    },
+    methods: {
+        prev_content(){
+            if (this.parentValue === 0) {
+                return
+            }
+            this.parentValue--;
+        },
+        next_content(){
+            if (this.parentValue === this.akad.length - 1) {
+                return
+            }
+            this.parentValue++;
         }
     }
 }
