@@ -13,7 +13,6 @@ const templater = `
         </div>
         </div>
             <div 
-            @animationend='end()'
             class='list_block animate__animated animate__flipInY' 
             v-for='(all,ind) in akad' 
             @click='emitter($event)' 
@@ -53,9 +52,6 @@ export default {
         },
         sort_import(e){
             sort(e); //Imported from another file.
-        },
-        end(){
-
         }
     },
     mounted(){
