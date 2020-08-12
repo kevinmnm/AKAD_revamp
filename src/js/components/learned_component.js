@@ -49,8 +49,7 @@ export default {
             let dv = document.querySelector('.learned_content');
             if (this.parentValue <= 0) {
                 dv.classList.remove('animate__bounceInRight');
-                this.parentValue = 0;
-                return
+                return this.parentValue = 0;
             }
             
 
@@ -69,8 +68,8 @@ export default {
             let dv = document.querySelector('.learned_content');
             if (this.parentValue >= this.akad.length - 1) {
                 dv.classList.remove('animate__bounceInLeft');
-                this.parentValue = this.akad.length -1;
-                return
+                return this.parentValue = this.akad.length -1;
+                
             }
             
             if (dv.classList.contains('animate__bounceInLeft')) {
@@ -83,13 +82,6 @@ export default {
                 dv.classList.add('animate__bounceInRight');
                 this.parentValue++;
             },200);
-        }
-    },
-    watch: {
-        pv_new(){
-            if (this.pv_new < 0) {
-                this.pv_new = 0;
-            }
         }
     }
 }
