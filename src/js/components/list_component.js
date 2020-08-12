@@ -13,15 +13,15 @@ const templater = `
         </div>
 
             <div 
-            :key='all' 
+            @animationend='end()'
             class='list_block' 
-            v-for='all in akad_length' 
+            v-for='(all,ind) in akad' 
             @click='emitter($event)' 
             @mousemove='hover_func($event)'
             @mouseleave='hover_func2($event)'>
-                {{ all }}
+                {{ ind + 1 }}
             </div>
-            
+
     <div id='hover_el'></div>
     </div>
 `
@@ -92,6 +92,9 @@ export default {
                     }
                 }
             }
+        },
+        end(){
+
         }
     },
     mounted(){
