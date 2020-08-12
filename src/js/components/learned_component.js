@@ -9,7 +9,7 @@ const templater = `
             <div class='fa fa-chevron-circle-left'></div>
         </div>
     
-        <div class='learned_content'>
+        <div class='learned_content' v-show='show_content'>
             <code class='date'>{{ akad[pv_new].date }}</code>
             <div class='title'><u>{{ akad[pv_new].topic }}</u></div>
             <div class='description'>{{ akad[pv_new].description }}</div>
@@ -37,6 +37,7 @@ export default {
     data(){
         return {
             akad: AKAD,
+            show_content: false
         }
     },
     computed: {
@@ -52,6 +53,14 @@ export default {
         next_content(){
             if (this.parentValue === this.akad.length - 1) {return}
             this.parentValue++;
+        }
+    },
+    watch: {
+        pv_new(){
+            if (this.pv_new !== null) {
+                this.show_content = true;
+
+            }
         }
     }
 }
