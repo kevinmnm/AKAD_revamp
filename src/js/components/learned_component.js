@@ -1,8 +1,6 @@
 import AKAD from "../ADAKNotes_revamp.js";
 import { prev_content, next_content } from "./prev_next_function.js";
 
-
-
 const templater = `
     <div class='learned_section animate__animated'>
 
