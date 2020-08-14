@@ -427,7 +427,7 @@ let AKAD = [
         description: 'Vue helper function "this" breaks if not following specific syntax.',
         referenceLink1: '',
         referenceLink2: '',
-        codepenEmbed: ``
+        codepenEmbed: `No codepen.io example available for this content. <br><br><img src='img/import_function_2.png' alt='screenshot' /><br><img src='img/import_function_1.png' alt='screenshot' />`
     }
 ];
 
