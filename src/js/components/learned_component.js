@@ -1,11 +1,12 @@
 import AKAD from "../ADAKNotes_revamp.js";
+import { prev_content, next_content } from "./prev_next_function.js";
 
 
 
 const templater = `
     <div class='learned_section animate__animated'>
 
-        <div class='learned_previous' @click='prev_content($event)'>
+        <div class='learned_previous' @click='prev($event)'>
             <div class='fa fa-chevron-circle-left'></div>
         </div>
     
@@ -24,7 +25,7 @@ const templater = `
             </div>
         </div>
     
-        <div class='learned_next' @click='next_content($event)'>
+        <div class='learned_next' @click='next($event)'>
             <div class='fa fa-chevron-circle-right'></div>
         </div>
 
@@ -45,43 +46,7 @@ export default {
         }
     },
     methods: {
-        prev_content(e){
-            let dv = document.querySelector('.learned_content');
-            if (this.parentValue <= 0) {
-                dv.classList.remove('animate__bounceInRight');
-                return this.parentValue = 0;
-            }
-            
-
-            if (dv.classList.contains('animate__bounceInRight')) {
-                dv.classList.remove('animate__bounceInRight');
-            }
-
-            dv.classList.add('animate__bounceOutRight');
-            setTimeout(()=>{
-                dv.classList.remove('animate__bounceOutRight');
-                dv.classList.add('animate__bounceInLeft');
-                this.parentValue--;
-            },200);
-        },
-        next_content(e){
-            let dv = document.querySelector('.learned_content');
-            if (this.parentValue >= this.akad.length - 1) {
-                dv.classList.remove('animate__bounceInLeft');
-                return this.parentValue = this.akad.length -1;
-                
-            }
-            
-            if (dv.classList.contains('animate__bounceInLeft')) {
-                dv.classList.remove('animate__bounceInLeft');
-            }
-
-            dv.classList.add('animate__bounceOutLeft');
-            setTimeout(()=>{
-                dv.classList.remove('animate__bounceOutLeft');
-                dv.classList.add('animate__bounceInRight');
-                this.parentValue++;
-            },200);
-        }
+        prev: prev_content,
+        next: next_content
     }
 }

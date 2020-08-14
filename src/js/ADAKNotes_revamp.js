@@ -418,6 +418,16 @@ let AKAD = [
         See the Pen <a href='https://codepen.io/kevinmnm/pen/ZEWbXqO'>Vue Passing Props Value to Child's Data!</a> by kevin
         (<a href='https://codepen.io/kevinmnm'>@kevinmnm</a>) on <a href='https://codepen.io'>CodePen</a>.
       </iframe>`
+    },
+    {
+        uniqueIdMathch: 'z83',
+        date: '08/03/2020',
+        content: 'Vue',
+        topic: 'Import/Export Function Syntax',
+        description: 'Vue helper function "this" breaks if not following specific syntax.',
+        referenceLink1: '',
+        referenceLink2: '',
+        codepenEmbed: ``
     }
 ];
 
