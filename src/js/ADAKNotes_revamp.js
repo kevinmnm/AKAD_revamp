@@ -420,7 +420,7 @@ let AKAD = [
       </iframe>`
     },
     {
-        uniqueIdMathch: 'z83',
+        uniqueIdMatch: 'z83',
         date: '08/03/2020',
         content: 'Vue',
         topic: 'Import/Export Function Syntax',
@@ -428,6 +428,13 @@ let AKAD = [
         referenceLink1: '',
         referenceLink2: '',
         codepenEmbed: `No codepen.io example available for this content. <br><br><img src='img/import_function_2.png' alt='screenshot' /><br><img src='img/import_function_1.png' alt='screenshot' />`
+    },
+    {
+        uniqueIdMatch: 'z84',
+        date: '08/03/2020',
+        content: 'Vue',
+        topic: 'Vue CLI Structure Overview (Router)',
+        description: 'Vue CLI will auto generate boiler plate, but it\'s important to understand connections between files for smooth coding experience. Quick overview below that includes Vue Router.'
     }
 ];
 
