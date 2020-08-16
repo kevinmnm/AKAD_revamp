@@ -434,7 +434,13 @@ let AKAD = [
         date: '08/03/2020',
         content: 'Vue',
         topic: 'Vue CLI Structure Overview (Router)',
-        description: 'Vue CLI will auto generate boiler plate, but it\'s important to understand connections between files for smooth coding experience. Quick overview below that includes Vue Router.'
+        description: 'Vue CLI will auto generate boiler plate, but it\'s important to understand connections between files for smooth coding experience. Quick overview below that includes Vue Router.',
+        referenceLink1: 'https://router.vuejs.org/',
+        referenceLink2: 'https://router.vuejs.org/guide/essentials/dynamic-matching.html#reacting-to-params-changes',
+        codepenEmbed: `<iframe height="600" style="width: 100%;" scrolling="no" title="Vue CLI Structure (Router)" src="https://codepen.io/kevinmnm/embed/XWddLxR?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+        See the Pen <a href='https://codepen.io/kevinmnm/pen/XWddLxR'>Vue CLI Structure (Router)</a> by kevin
+        (<a href='https://codepen.io/kevinmnm'>@kevinmnm</a>) on <a href='https://codepen.io'>CodePen</a>.
+      </iframe>`
     }
 ];
 
